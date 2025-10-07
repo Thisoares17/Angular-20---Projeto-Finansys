@@ -1,1 +1,79 @@
-<p>teste</p>
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="mb-4">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a routerLink="/" class="text-decoration-none">Home</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+  </ol>
+</nav>
+
+<!-- Header -->
+<div class="row align-items-center mb-3">
+  <div class="col-md">
+    <h1 class="h2 border-start ps-3 m-0">
+      Categorias
+    </h1>
+  </div>
+
+  <div class="col-md-auto text-md-end mt-3 mt-md-0">
+    <a [routerLink]="['new']" class="btn btn-success">+ Nova Categoria</a>
+  </div>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+        <th class="bg-primary text-light">Categoria</th>
+        <th class="bg-primary text-light">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <strong>Lazer</strong><br>
+              <small>Cinema, Parque, Praia, Etc</small>  
+            </td>
+            <td>
+                <a [routerLink]="[':id/edit']" class="btn btn-outline-info btn-sm me-2">Editar</a> 
+                <button (click)="alert('excluir')" class="btn btn-outline-danger btn-sm">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+        <thead>
+        <tr>
+        <th class="bg-primary text-light">Categoria</th>
+        <th class="bg-primary text-light">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <strong>Lazer</strong><br>
+              <small>Cinema, Parque, Praia, Etc</small>  
+            </td>
+            <td>
+                <a [routerLink]="[':id/edit']" class="btn btn-outline-info btn-sm me-2">Editar</a> 
+                <button (click)="alert('excluir')" class="btn btn-outline-danger btn-sm">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+        <thead>
+        <tr>
+        <th class="bg-primary text-light">Categoria</th>
+        <th class="bg-primary text-light">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <strong>Lazer</strong><br>
+              <small>Cinema, Parque, Praia, Etc</small>  
+            </td>
+            <td>
+                <a [routerLink]="[':id/edit']" class="btn btn-outline-info btn-sm me-2">Editar</a> 
+                <button (click)="alert('excluir')" class="btn btn-outline-danger btn-sm">Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

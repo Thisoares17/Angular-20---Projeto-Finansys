@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CategoryList } from './category-list/category-list';
-import { CategoryForm } from './category-form/category-form';
+import { CategoryListComponent } from './category-list/category-list';
+import { CategoryFormComponent } from './category-form/category-form';
+
 
 const routes: Routes = [
-  {path: '', component: CategoryList },
-  {path: 'new', component: CategoryList },
-  {path: ':id/edit', component: CategoryForm }
+  {path: '', component: CategoryListComponent },
+  {path: 'new', component: CategoryFormComponent },
+  {path: ':id/edit', component: CategoryFormComponent }
 ];
 
 @NgModule({

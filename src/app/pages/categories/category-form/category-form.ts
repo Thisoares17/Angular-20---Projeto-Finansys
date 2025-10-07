@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
+  standalone: true,
   selector: 'app-category-form',
-  imports: [],
   templateUrl: './category-form.html',
-  styleUrl: './category-form.css'
+  imports: [RouterModule],
+  styleUrls: ['./category-form.css']
 })
-export class CategoryForm {
+export class CategoryFormComponent {
 
 }

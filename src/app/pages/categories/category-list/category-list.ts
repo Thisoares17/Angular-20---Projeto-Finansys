@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-category-list',
-  imports: [],
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './category-list.html',
-  styleUrl: './category-list.css'
+  styleUrls: ['./category-list.css']
 })
-export class CategoryList {
+export class CategoryListComponent {
+alert(arg0: string) {
+throw new Error('Method not implemented.');
+}
 
 }

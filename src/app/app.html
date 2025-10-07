@@ -1,17 +1,28 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 p-3 ">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4 p-3">
   <a class="navbar-brand" routerLink="/">FINANSYS</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+  <!-- Botão hamburguer -->
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+
+  <!-- Itens do menu -->
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item "routerLinkActive="active">
-        <a class="nav-link" routerLink="/reports">Relatorios</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/reports">Relatórios</a>
       </li>
-      <li class="nav-item "routerLinkActive="active"  >
-        <a class="nav-link" routerLink="/entries">Lancamentos</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/entries">Lançamentos</a>
       </li>
-      <li class="nav-item "routerLinkActive="active">
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="/categories">Categorias</a>
       </li>
     </ul>
@@ -19,6 +30,5 @@
 </nav>
 
 <div class="container">
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
-
