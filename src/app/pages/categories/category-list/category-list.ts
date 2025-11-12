@@ -6,7 +6,10 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-category-list',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [
+    CommonModule, 
+    RouterModule
+  ],
   templateUrl: './category-list.html',
   styleUrls: ['./category-list.css']
 })
@@ -15,7 +18,7 @@ export class CategoryListComponent implements OnInit {
   categoriesList!: any[];
 
   
-  constructor(private inMemoryDatabase: InMemoryDatabase) {}
+  constructor(public inMemoryDatabase: InMemoryDatabase) {}
 
   ngOnInit() {
     this.categoriesList = this.getCategories();

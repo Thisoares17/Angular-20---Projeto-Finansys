@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CategoriesRoutingModule } from './categories-routing-module';
 import { CategoryListComponent } from './category-list/category-list';
 import { CategoryFormComponent } from './category-form/category-form';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { CategoryFormComponent } from './category-form/category-form';
     CommonModule,
     CategoriesRoutingModule,
     CategoryListComponent,
-    CategoryFormComponent
+    CategoryFormComponent,
+    RouterModule
   ]
 })
 export class CategoriesModule { }

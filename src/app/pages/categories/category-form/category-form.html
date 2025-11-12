@@ -1,1 +1,56 @@
-<p>category-form works!</p>
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item"><a routerLink="/categories">Categoria</a></li>
+        <li class="breadcrumb-item active">Formulário de Categorias</li>
+    </ol>
+</nav>
+
+<!-- Header -->
+<div class="row align-items-center mb-3">
+    <div class="col-md">
+        <h1 class="h2 border-start ps-3 m-0">
+            Formulário de Categorias {{ currentAction }}
+        </h1>
+    </div>
+
+    <div class="col-md-auto text-md-end mt-3 mt-md-0">
+        <a [routerLink]="['/categories']" class="btn btn-light">Voltar</a>
+    </div>
+</div>
+
+<!-- Formulário -->
+<form [formGroup]="categoryForm" (ngSubmit)="createCategory()">
+    <div class="card">
+        <div class="card-header">
+            Informações sobre a Categoria
+        </div>
+
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label for="name">Nome</label>
+                    <input id="name" type="text" class="form-control" formControlName="name" />
+                </div>
+                <div class="col-md-8">
+                    <label for="description">Descrição</label>
+                    <input id="description" type="text" class="form-control" formControlName="description" />
+                    @if(categoryForm.get('name')?.invalid && categoryForm.get('name')?.touched){
+                    <div class="text-danger">
+                        @if(categoryForm.get('name')?.errors?.['required']){ <div>Dado obrigatório</div> }
+                        @if(categoryForm.get('name')?.errors?.['minlength']){ <div>Deve ter no mínimo 2 caracteres</div>
+                        }
+                    </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg float-right mt-3"
+        [disabled]="submittingForm || categoryForm.invalid">
+        Salvar
+    </button>
+</form>
